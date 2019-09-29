@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
+import './Header.css';
 
-function App() {
+function Header() {
   return (
     <div className="jumbotron jumbotron-fluid py-4">
       <header className="container">
@@ -16,7 +16,7 @@ function App() {
         </div>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default Header;
