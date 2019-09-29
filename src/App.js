@@ -1,23 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="jumbotron jumbotron-fluid py-4">
+      <header className="container">
+        <h1 className="display-5">Kiki's CookBook</h1>
+        <p className="lead">This is a site where I can easily navigate through my personal collection of recipes.</p>
+        <hr className="my-3" />
+        <p>Sign in or register to add new recipes</p>
+        <div className="d-flex">
+            <a className="btn btn-regular btn-md" href="/recipes/new" role="button">Add New Recipe</a>
+            <a className="btn btn-regular btn-md mr-2 ml-auto" href="/login" role="button">Sign In</a>
+            <a className="btn btn-regular btn-md" href="/register" role="button">Register</a>
+        </div>
       </header>
     </div>
   );
