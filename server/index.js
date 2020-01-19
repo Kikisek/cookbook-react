@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-mongoose.connect('mongodb://localhost/recipes');
+mongoose.connect('mongodb://localhost/recipes', { useUnifiedTopology: true, useNewUrlParser: true });
 
 let RecipeSchema = new Schema({
   title: {
