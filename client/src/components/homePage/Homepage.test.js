@@ -6,7 +6,4 @@ test('homepage', () => {
   const { getByText } = render(<App />);
 
   expect(getByText("Kiki's CookBook")).toBeInTheDocument();
-  expect(getByText('Add New Recipe')).toHaveAttribute('href', '/recipes/new');
-  expect(getByText('Sign In')).toHaveAttribute('href', '/login');
-  expect(getByText('Register')).toHaveAttribute('href', '/register');
 });

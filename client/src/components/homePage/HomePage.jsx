@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import RecipeCard from '../recipeCard/RecipeCard';
 
 const Header = () => {
   const [recipes, setRecipes] = useState([]);
@@ -12,6 +13,7 @@ const Header = () => {
   }, []);
 
   return (
+    <>
     <div className="jumbotron jumbotron-fluid py-4">
       <header className="container">
         <h1 className="display-5">Kiki's CookBook</h1>
@@ -20,6 +22,9 @@ const Header = () => {
         </p>
       </header>
     </div>
+
+    {recipes.map(recipe => <RecipeCard recipe={recipe} />)}
+    </>
   );
 };
 
