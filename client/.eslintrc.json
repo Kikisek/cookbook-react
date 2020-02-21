@@ -1,4 +1,10 @@
 {
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "codeFrame": false
+  },
   "extends": ["airbnb", "prettier"],
   "plugins": ["prettier"],
   "globals": {
