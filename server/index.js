@@ -61,5 +61,12 @@ app.get('/recipes', function(req, res) {
   });
 });
 
+app.get('/recipes/:id', function(req, res) {
+  console.log(req.params.id);
+  Recipe.findById(req.params.id, function(err, recipe) {
+    err ? console.log(err) : res.json(recipe);
+  })
+});
+
 // start the DB locally: mongod
 app.listen(8080, () => console.log('Example app listening on port 8080!'));
