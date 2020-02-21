@@ -3,7 +3,7 @@ import RecipeCard from '../recipeCard/RecipeCard';
 
 const Header = () => {
   const [recipes, setRecipes] = useState([]);
-  const [error, setError] = useState({});
+  const [error, setError] = useState();
 
   useEffect(() => {
     fetch('http://localhost:8080/recipes')
@@ -14,16 +14,24 @@ const Header = () => {
 
   return (
     <>
-    <div className="jumbotron jumbotron-fluid py-4">
-      <header className="container">
-        <h1 className="display-5">Kiki's CookBook</h1>
-        <p className="lead">
-          This is a site where I can easily navigate through my personal collection of recipes.
-        </p>
-      </header>
-    </div>
+      {error && <div>Something went wrong...</div>}
+      {!error && (
+        <>
+          <div className="jumbotron jumbotron-fluid py-4">
+            <header className="container">
+              <h1 className="display-5">Kiki's CookBook</h1>
+              <p className="lead">
+                This is a site where I can easily navigate through my personal collection of
+                recipes.
+              </p>
+            </header>
+          </div>
 
-    {recipes.map(recipe => <RecipeCard recipe={recipe} />)}
+          {recipes.map(recipe => (
+            <RecipeCard key={recipe._id} recipe={recipe} />
+          ))}
+        </>
+      )}
     </>
   );
 };
