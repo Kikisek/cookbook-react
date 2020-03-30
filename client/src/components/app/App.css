@@ -43,15 +43,6 @@ hr {
   border-color: #DCD0C0 !important;
 }
 
-.card {
-  border-color: #DCD0C0;
-}
-
-.fa-chevron-down, .fa-chevron-up {
-  display: block;
-  text-align: center;
-}
-
 .hidden, .card-text {
   display: none;
 }
@@ -62,16 +53,6 @@ ul.card-text {
 
 .card-body {
   padding-bottom: 0;
-}
-
-.chevron {
-  height: 2em;
-  cursor: pointer;
-}
-
-.recipe-image {
-  max-width: 100%;
-  border-radius: 2%;
 }
 
 .prep-times {

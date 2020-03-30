@@ -15,8 +15,19 @@ import {
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const useStyles = makeStyles(theme => ({
+  card: {
+    display: 'inline-block',
+    width: '100%',
+    marginBottom: '7px',
+  },
+  link: {
+    height: '250px',
+    display: 'flex',
+    flexDirection: 'column',
+  },
   media: {
-    maxWidth: '100%',
+    maxHeight: '100%',
+    objectFit: 'cover',
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -40,8 +51,8 @@ const RecipeCard = props => {
   };
 
   return (
-    <Card>
-      <Link to={`/recipes/${_id}`}>
+    <Card className={classes.card}>
+      <Link className={classes.link} to={`/recipes/${_id}`}>
         <img src={image} alt="" className={classes.media} />
         <CardHeader title={title} />
       </Link>
