@@ -7,7 +7,7 @@ const useStyles = makeStyles(() => ({
   wrapper: {
     columnCount: 3,
     columnGap: '13px',
-    ['@media (max-width:780px)']: {
+    ['@media (max-width:780px)']: { // eslint-disable-line no-useless-computed-key
       columnCount: 1,
     },
   },
